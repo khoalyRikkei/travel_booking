@@ -1,95 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Travel Booking</title>
-        <link rel="stylesheet" href="./assets/css/style.css" />
-    </head>
-    <body>
-        <div class="bg-top"></div>
-        <aside class="sidebar">
-            <div class="sidebar--bar">
-                <div class="logo">
-                    <img src="./assets/images/logo.png" alt="" />
-                </div>
-                <div class="icon icon-bar"></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="bg-top"></div>
+    <aside class="sidebar">
+        <div class="sidebar--bar">
+            <div class="logo sidebar--toggle">
+                <img src="./assets/images/logo-2.png" alt="" />
             </div>
-            <button class="btn">
+            <div class="icon icon-bar " onclick="handleToggleMenu(this)" id="sidebar--toggle-close"></div>
+            <div class="icon icon-bar-reverse " onclick="handleToggleMenu(this)" id="sidebar--toggle-open"></div>
+        </div>
+        <div class="sidebar--menu">
+            <div class="btn">
                 <i class="icon icon-home-2"></i>
-                <span>Home</span>
-            </button>
-            <button class="btn">
+                <span class="sidebar--toggle">Home</span>
+            </div>
+            <div class="btn">
                 <i class="icon icon-wallet"></i>
-                <span>Wallet</span></button
-            ><button class="btn">
+                <span class="sidebar--toggle">Wallet</span>
+            </div>
+            <div class="btn">
                 <i class="icon icon-contacts"></i>
-                <span>Booking</span></button
-            ><button class="btn">
+                <span class="sidebar--toggle">Booking</span>
+            </div>
+            <div class="btn">
                 <i class="icon icon-bag"></i>
-                <span>Business</span></button
-            ><button class="btn">
+                <span class="sidebar--toggle">Business</span>
+            </div>
+            <div class="btn">
                 <i class="icon icon-earth"></i>
-                <span>Explore</span></button
-            ><button class="btn">
+                <span class="sidebar--toggle">Explore</span>
+            </div>
+            <div class="btn">
                 <i class="icon icon-help"></i>
-                <span>Support</span>
-            </button>
-        </aside>
-        <section class="main-layout">
-            <header>
-                <div class="profile-bar">
-                    <button class="btn">
-                        <i class="icon icon-home-add"></i>
-                        <span>Become a Partner</span>
-                        <i class="icon icon-down"></i>
-                    </button>
-                    <button class="btn">
-                        <i class="icon"
-                            ><img src="./assets/images/avt-1.png" alt="avt-1"
-                        /></i>
-                        <span>Become a Partner</span>
-                        <i class="icon icon-down"></i>
-                    </button>
+                <span class="sidebar--toggle">Support</span>
+            </div>
+        </div>
+        <div class="sidebar--footer">
+            <div class="btn btn--2">
+                <div class="logo"><i class="icon icon-award"></i></div>
+                <div class="sidebar--toggle">
+                    <h5>Get Premium</h5>
+                    <p>$39/m</p>
                 </div>
-                <nav class="navbar">
-                    <ul class="navbar__menu">
-                        <li class="active">
-                            <i class="icon icon-plane"></i>
-                            <a href="#">Flights</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-bed"></i><a href="">hotel</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-home"></i><a href="">villa</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-home"></i><a href="">taxi</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="form-search card">
-                    <div class="tab-bar">
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab active">Oneway</div>
+                <i class="icon icon-pause"></i>
+            </div>
+        </div>
+    </aside>
+    <section class="main-layout">
+        <header>
+            <div class="profile-bar">
+                <button class="btn">
+                    <i class="icon icon-home-add"></i>
+                    <span>Become a Partner</span>
+                    <i class="icon icon-down"></i>
+                </button>
+                <button class="btn">
+                    <i class="icon"><img src="./assets/images/avt-1.png" alt="avt-1" /></i>
+                    <span>Become a Partner</span>
+                    <i class="icon icon-down"></i>
+                </button>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__menu">
+                    <li class="active">
+                        <i class="icon icon-plane"></i>
+                        <a href="#">Flights</a>
+                    </li>
+                    <li>
+                        <i class="icon icon-bed"></i><a href="">hotel</a>
+                    </li>
+                    <li>
+                        <i class="icon icon-home"></i><a href="">villa</a>
+                    </li>
+                    <li>
+                        <i class="icon icon-home"></i><a href="">taxi</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="form-search card">
+                <div class="tab-bar">
+                    <div class="tab-bar__item">
+                        <div class="tab-bar__item--label"></div>
+                        <div class="tab-bar__item--tab active">Oneway</div>
+                    </div>
+                    <div class="tab-bar__item">
+                        <div class="tab-bar__item--label"></div>
+                        <div class="tab-bar__item--tab">Round Trip</div>
+                    </div>
+                    <div class="tab-bar__item">
+                        <div class="tab-bar__item--label"></div>
+                        <div class="tab-bar__item--tab">Multy city</div>
+                    </div>
+                </div>
+                <form action="" class="form-flight">
+                    <div class="row">
+                        <div class="card card--small info-default">
+                            <div class="card__label">
+                                <i class="icon icon-local"></i>
+                                <span>Form</span>
+                            </div>
+                            <div class="card__title">Dhaka, Bangladesh</div>
+                            <div class="card__sub-title">Usmani airport, Sylhet</div>
                         </div>
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab">Round Trip</div>
+                        <div class="card card--small info-default">
+                            <div class="card__label">
+                                <i class="icon icon-local"></i>
+                                <span>T0</span>
+                            </div>
+                            <div class="card__title">Dilhi, India</div>
+                            <div class="card__sub-title">Shuvas chandra bosu airport</div>
                         </div>
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab">Multy city</div>
+                        <div class="card card--small info-custom">
+                            <div class="card__label">
+                                <i class="icon icon-char"></i>
+                                <span>class</span>
+                            </div>
+                            <div class="card__title">3 Persons</div>
+                            <div class="card__sub-title">Business</div>
                         </div>
                     </div>
-                    <form action="">
-                        <div class="card"></div>
-                    </form>
+                    <div class="row">
+                        <div class="card card--small info-custom">
+                            <div class="card__label">
+                                <i class="icon icon-calendar"></i>
+                                <span>Departure</span>
+                                <div class="card__label-right"><i class="icon icon-down-2"></i></div>
+                            </div>
+                            <div class="card__title">21 Aug’20</div>
+                            <div class="card__sub-title">Sunday</div>
+                        </div>
+                        <div class="card card--small info-custom">
+                            <div class="card__label">
+                                <i class="icon icon-calendar"></i>
+                                <span>return</span>
+                                <div class="card__label-right"><i class="icon icon-down-2"></i></div>
+                            </div>
+                            <div class="card__title">29 Aug’20</div>
+                            <div class="card__sub-title">Sunday</div>
+                        </div>
+                        <div class="card card--small info-custom">
+                            <div class="card__label">
+                                <i class="icon icon-calendar"></i>
+                                <span>return</span>
+                            </div>
+                            <div class="card__title">More</div>
+                            <div class="card__sub-title">Business</div>
+                        </div>
+                        <button class="btn info-custom">search flight</button>
+                    </div>
+                </form>
+            </div>
+        </header>
+        <section class="section slick-multiple-items" id="special-offer">
+            <div class="card">
+                <div class="card--img">
+                    <img src="./assets/images/offer-1.png" alt="">
                 </div>
-            </header>
+                <div class="card--text">
+                    <div class="card__label">Citytuch</div>
+                    <div class="card__title">Up to $599 discount</div>
+                    <div class="card__sub-title">Domestic flight</div>
+                    <div class="card__footer">
+                        <p>Cupon: dhshjab09d</p>
+                        <button class="btn ">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--img">
+                    <img src="./assets/images/offer-1.png" alt="">
+                </div>
+                <div class="card--text">
+                    <div class="card__label">Citytuch</div>
+                    <div class="card__title">Up to $599 discount</div>
+                    <div class="card__sub-title">Domestic flight</div>
+                    <div class="card__footer">
+                        <p>Cupon: dhshjab09d</p>
+                        <button class="btn ">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--img">
+                    <img src="./assets/images/offer-1.png" alt="">
+                </div>
+                <div class="card--text">
+                    <div class="card__label">Citytuch</div>
+                    <div class="card__title">Up to $599 discount</div>
+                    <div class="card__sub-title">Domestic flight</div>
+                    <div class="card__footer">
+                        <p>Cupon: dhshjab09d</p>
+                        <button class="btn ">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--img">
+                    <img src="./assets/images/offer-1.png" alt="">
+                </div>
+                <div class="card--text">
+                    <div class="card__label">Citytuch</div>
+                    <div class="card__title">Up to $599 discount</div>
+                    <div class="card__sub-title">Domestic flight</div>
+                    <div class="card__footer">
+                        <p>Cupon: dhshjab09d</p>
+                        <button class="btn ">Book Now</button>
+                    </div>
+                </div>
+            </div>
         </section>
-    </body>
+    </section>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
