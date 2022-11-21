@@ -3,6 +3,8 @@
         "sass": "^1.56.1"
     },
     "scripts": {
-        "style": "sass assets/scss/style.scss  assets/css/style.css -w"
+        "style": "sass assets/scss/style.scss  assets/css/style.css -w",
+        "slick": "sass assets/scss/slick.scss  assets/css/slick.css -w",
+        "components": "sass assets/scss/components.scss  assets/css/components.css -w"
     }
 }

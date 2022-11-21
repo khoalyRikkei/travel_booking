@@ -7,6 +7,7 @@
         <title>Travel Booking</title>
         <link rel="stylesheet" href="./assets/css/slick.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/components.css" />
     </head>
 
     <body>
@@ -66,158 +67,91 @@
         </aside>
 
         <section class="main-layout">
-            <header class="container">
-                <div class="profile-bar">
-                    <button class="btn">
-                        <i class="icon icon-home-add"></i>
-                        <span>Become a Partner</span>
-                        <i class="icon icon-down"></i>
-                    </button>
-                    <button class="btn">
-                        <i class="icon"
-                            ><img src="./assets/images/avt-1.png" alt="avt-1"
-                        /></i>
-                        <span>Become a Partner</span>
-                        <i class="icon icon-down"></i>
-                    </button>
+            <header>
+                <div class="top-menu container">
+                    <div class="profile-bar">
+                        <button class="btn">
+                            <i class="icon icon-home-add"></i>
+                            <span>Become a Partner</span>
+                            <i class="icon icon-down"></i>
+                        </button>
+                        <button class="btn">
+                            <i class="icon"
+                                ><img
+                                    src="./assets/images/avt-1.png"
+                                    alt="avt-1"
+                            /></i>
+                            <span>Become a Partner</span>
+                            <i class="icon icon-down"></i>
+                        </button>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="navbar__menu">
+                            <li class="active">
+                                <i class="icon icon-plane"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-bed"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-home"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-home"></i>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="navbar">
-                    <ul class="navbar__menu">
-                        <li class="active">
-                            <i class="icon icon-plane"></i>
-                            <a href="#">Flights</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-bed"></i><a href="">hotel</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-home"></i><a href="">villa</a>
-                        </li>
-                        <li>
-                            <i class="icon icon-home"></i><a href="">taxi</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="form-search card">
-                    <div class="tab-bar">
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab active">Oneway</div>
-                        </div>
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab">Round Trip</div>
-                        </div>
-                        <div class="tab-bar__item">
-                            <div class="tab-bar__item--label"></div>
-                            <div class="tab-bar__item--tab">Multy city</div>
+
+                <form class="form" action="flight-results.html">
+                    <div class="form__item">
+                        <div class="form__label">Type</div>
+                        <div class="form__content">
+                            <select name="type" id="">
+                                <option value="onway">Onway</option>
+                                <option value="Round Trip">Round Trip</option>
+                                <option value="Multy city">Multy city</option>
+                            </select>
                         </div>
                     </div>
-                    <form action="flight-results.html" class="form">
-                        <div class="row">
-                            <div class="card form__item form__item--large">
-                                <div class="form__item--label">
-                                    <i class="icon icon-local"></i>
-                                    <span>From</span>
-                                </div>
-                                <input
-                                    type="text"
-                                    name="from"
-                                    value=" Dhaka, Bangladesh"
-                                    class="form__item--title"
-                                />
-                                <div class="form__item--sub-title">
-                                    Usmani airport, Sylhet
-                                </div>
-                            </div>
-                            <div class="card form__item form__item--large">
-                                <div class="form__item--label">
-                                    <i class="icon icon-local"></i>
-                                    <span>T0</span>
-                                </div>
-                                <input
-                                    type="text"
-                                    name="to"
-                                    value="Dilhi, India"
-                                    class="form__item--title"
-                                />
-                                <div class="form__item--sub-title">
-                                    Shuvas chandra bosu airport
-                                </div>
-                            </div>
-                            <div class="card form__item">
-                                <div class="form__item--label">
-                                    <i class="icon icon-char"></i>
-                                    <span>class</span>
-                                </div>
-                                <div class="form__item--title">
-                                    <input
-                                        type="number"
-                                        name="person"
-                                        value="3"
-                                        id="person"
-                                    />
-                                    <label for="person">Persons</label>
-                                </div>
-
-                                <select
-                                    class="form__item--sub-title"
-                                    name="class"
-                                >
-                                    <option value="business">Business</option>
-                                    <option value="eco">Eco</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="card form__item">
-                                <div class="form__item--label">
-                                    <i class="icon icon-calendar"></i>
-                                    <select name="type">
-                                        <option value="departure-return">
-                                            Departure
-                                        </option>
-                                        <option value="return-departure">
-                                            return
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form__item--title">21 Aug’20</div>
-                                <div class="form__item--sub-title">Sunday</div>
-                            </div>
-                            <div class="card form__item">
-                                <div class="form__item--label">
-                                    <i class="icon icon-calendar"></i>
-                                    <select name="type">
-                                        <option value="return-departure">
-                                            return
-                                        </option>
-                                        <option value="departure-return">
-                                            Departure
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="form__item--title">29 Aug’20</div>
-                                <div class="form__item--sub-title">Sunday</div>
-                            </div>
-                            <div class="card form__item">
-                                <div class="form__item--label">
-                                    <i class="icon icon-calendar"></i>
-                                    <span>return</span>
-                                </div>
-                                <div class="form__item--title">More</div>
-                                <div class="form__item--sub-title">
-                                    Business
-                                </div>
-                            </div>
+                    <div class="form__item">
+                        <div class="form__label">From</div>
+                        <div class="form__content">
                             <input
-                                type="submit"
-                                class="btn"
-                                value="search flight"
+                                type="text"
+                                name="from"
+                                value="Dhaka,Bangladesh"
                             />
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">From</div>
+                        <div class="form__content">
+                            <input type="text" name="to" value="Dilhi, India" />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">class</div>
+                        <div class="form__content">
+                            <select name="person" id="">
+                                <option value="1">1 Persons</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3" selected>3 Persons</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">Departure - Return</div>
+                        <div class="form__content">
+                            <input
+                                type="text"
+                                value="21 Aug’19  -  29 Aug’19"
+                            />
+                            <i class="icon icon-calendar"></i>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="search flight" />
+                </form>
             </header>
             <section class="section" id="special-offer">
                 <div class="section__title">Special Offer</div>
