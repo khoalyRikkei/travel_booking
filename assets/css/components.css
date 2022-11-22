@@ -334,6 +334,27 @@ body {
   display: flex;
   flex-direction: column;
 }
+.content-layout--aside .card__content--name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: -10px;
+}
+.content-layout--aside .card__content--name-sub {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #54556c;
+  margin-top: -30px;
+  text-align: center;
+}
+.content-layout--aside .card__content-btn {
+  margin-top: -15px;
+  width: 100px;
+  padding: 8px 10px;
+  margin: 0 auto;
+}
 .content-layout--aside .card--small {
   width: 100%;
   display: flex;
@@ -361,6 +382,11 @@ body {
 }
 .content-layout--aside .card__footer .price__info {
   justify-content: end;
+}
+.content-layout--aside .card__img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 .content-layout--aside select {
   height: 40px;

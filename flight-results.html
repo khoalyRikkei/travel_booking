@@ -1,665 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Travel Booking</title>
-        <link rel="stylesheet" href="./assets/css/slick.css" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/components.css" />
-    </head>
 
-    <body>
-        <div class="bg-top"></div>
-        <aside class="sidebar">
-            <div class="sidebar--bar">
-                <div class="logo sidebar--toggle">
-                    <img src="./assets/images/logo-2.png" alt="" />
-                </div>
-                <div
-                    class="icon icon-bar"
-                    onclick="handleToggleMenu(this)"
-                    id="sidebar--toggle-close"
-                ></div>
-                <div
-                    class="icon icon-bar-reverse"
-                    onclick="handleToggleMenu(this)"
-                    id="sidebar--toggle-open"
-                ></div>
-            </div>
-            <div class="sidebar--menu">
-                <div class="btn">
-                    <i class="icon icon-home-2"></i>
-                    <span class="sidebar--toggle">Home</span>
-                </div>
-                <div class="btn">
-                    <i class="icon icon-wallet"></i>
-                    <span class="sidebar--toggle">Wallet</span>
-                </div>
-                <div class="btn">
-                    <i class="icon icon-contacts"></i>
-                    <span class="sidebar--toggle">Booking</span>
-                </div>
-                <div class="btn">
-                    <i class="icon icon-bag"></i>
-                    <span class="sidebar--toggle">Business</span>
-                </div>
-                <div class="btn">
-                    <i class="icon icon-earth"></i>
-                    <span class="sidebar--toggle">Explore</span>
-                </div>
-                <div class="btn">
-                    <i class="icon icon-help"></i>
-                    <span class="sidebar--toggle">Support</span>
-                </div>
-            </div>
-            <div class="sidebar--footer">
-                <div class="btn btn--2">
-                    <div class="logo"><i class="icon icon-award"></i></div>
-                    <div class="sidebar--toggle">
-                        <h5>Get Premium</h5>
-                        <p>$39/m</p>
-                    </div>
-                    <i class="icon icon-pause"></i>
-                </div>
-            </div>
-        </aside>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Booking</title>
+    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/components.css" />
+</head>
 
-        <section class="main-layout">
-            <header>
-                <div class="top-menu container">
-                    <div class="profile-bar">
-                        <button class="btn">
-                            <i class="icon icon-home-add"></i>
-                            <span>Become a Partner</span>
-                            <i class="icon icon-down"></i>
-                        </button>
-                        <button class="btn">
-                            <i class="icon"
-                                ><img
-                                    src="./assets/images/avt-1.png"
-                                    alt="avt-1"
-                            /></i>
-                            <span>Become a Partner</span>
-                            <i class="icon icon-down"></i>
-                        </button>
-                    </div>
-                    <nav class="navbar">
-                        <ul class="navbar__menu">
-                            <li class="active">
-                                <i class="icon icon-plane"></i>
-                            </li>
-                            <li>
-                                <i class="icon icon-bed"></i>
-                            </li>
-                            <li>
-                                <i class="icon icon-home"></i>
-                            </li>
-                            <li>
-                                <i class="icon icon-car"></i>
-                            </li>
-                        </ul>
-                    </nav>
+<body>
+    <div class="bg-top"></div>
+    <aside class="sidebar">
+        <div class="sidebar--bar">
+            <div class="logo sidebar--toggle">
+                <img src="./assets/images/logo-2.png" alt="" />
+            </div>
+            <div class="icon icon-bar" onclick="handleToggleMenu(this)" id="sidebar--toggle-close"></div>
+            <div class="icon icon-bar-reverse" onclick="handleToggleMenu(this)" id="sidebar--toggle-open"></div>
+        </div>
+        <div class="sidebar--menu">
+            <div class="btn">
+                <i class="icon icon-home-2"></i>
+                <span class="sidebar--toggle">Home</span>
+            </div>
+            <div class="btn">
+                <i class="icon icon-wallet"></i>
+                <span class="sidebar--toggle">Wallet</span>
+            </div>
+            <div class="btn">
+                <i class="icon icon-contacts"></i>
+                <span class="sidebar--toggle">Booking</span>
+            </div>
+            <div class="btn">
+                <i class="icon icon-bag"></i>
+                <span class="sidebar--toggle">Business</span>
+            </div>
+            <div class="btn">
+                <i class="icon icon-earth"></i>
+                <span class="sidebar--toggle">Explore</span>
+            </div>
+            <div class="btn">
+                <i class="icon icon-help"></i>
+                <span class="sidebar--toggle">Support</span>
+            </div>
+        </div>
+        <div class="sidebar--footer">
+            <div class="btn btn--2">
+                <div class="logo"><i class="icon icon-award"></i></div>
+                <div class="sidebar--toggle">
+                    <h5>Get Premium</h5>
+                    <p>$39/m</p>
                 </div>
-
-                <form class="form" action="flight-results.html">
-                    <div class="form__item">
-                        <div class="form__label">Type</div>
-                        <div class="form__content">
-                            <select name="type" id="">
-                                <option value="onway">Onway</option>
-                                <option value="Round Trip">Round Trip</option>
-                                <option value="Multy city">Multy city</option>
-                            </select>
-                        </div>
+                <i class="icon icon-pause"></i>
+            </div>
+        </div>
+    </aside>
+    <section class="main-layout">
+        <header>
+            <div class="top-menu container">
+                <div class="profile-bar">
+                    <button class="btn">
+                        <i class="icon icon-home-add"></i>
+                        <span>Become a Partner</span>
+                        <i class="icon icon-down"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="icon"><img src="./assets/images/avt-1.png" alt="avt-1" /></i>
+                        <span>Become a Partner</span>
+                        <i class="icon icon-down"></i>
+                    </button>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar__menu">
+                        <li class="active">
+                            <i class="icon icon-plane"></i>
+                        </li>
+                        <li>
+                            <i class="icon icon-bed"></i>
+                        </li>
+                        <li>
+                            <i class="icon icon-home"></i>
+                        </li>
+                        <li>
+                            <i class="icon icon-car"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <form class="form" action="flight-results.html">
+                <div class="form__item">
+                    <div class="form__label">Type</div>
+                    <div class="form__content">
+                        <select name="type" id="">
+                            <option value="onway">Onway</option>
+                            <option value="Round Trip">Round Trip</option>
+                            <option value="Multy city">Multy city</option>
+                        </select>
                     </div>
-                    <div class="form__item">
-                        <div class="form__label">From</div>
-                        <div class="form__content">
-                            <input
-                                type="text"
-                                name="from"
-                                value="Dhaka,Bangladesh"
-                            />
-                        </div>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">From</div>
+                    <div class="form__content">
+                        <input type="text" name="from" value="Dhaka,Bangladesh" />
                     </div>
-                    <div class="form__item">
-                        <div class="form__label">From</div>
-                        <div class="form__content">
-                            <input type="text" name="to" value="Dilhi, India" />
-                        </div>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">From</div>
+                    <div class="form__content">
+                        <input type="text" name="to" value="Dilhi, India" />
                     </div>
-                    <div class="form__item">
-                        <div class="form__label">class</div>
-                        <div class="form__content">
-                            <select name="person" id="">
-                                <option value="1">1 Persons</option>
-                                <option value="2">2 Persons</option>
-                                <option value="3" selected>3 Persons</option>
-                            </select>
-                        </div>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">class</div>
+                    <div class="form__content">
+                        <select name="person" id="">
+                            <option value="1">1 Persons</option>
+                            <option value="2">2 Persons</option>
+                            <option value="3" selected>3 Persons</option>
+                        </select>
                     </div>
-                    <div class="form__item">
-                        <div class="form__label">Departure - Return</div>
-                        <div class="form__content">
-                            <div>21 Aug’19 - 29 Aug’19</div>
-                            <i class="icon icon-calendar"></i>
-                        </div>
+                </div>
+                <div class="form__item">
+                    <div class="form__label">Departure - Return</div>
+                    <div class="form__content">
+                        <div>21 Aug’19 - 29 Aug’19</div>
+                        <i class="icon icon-calendar"></i>
                     </div>
-                    <input type="submit" class="btn" value="search flight" />
-                </form>
-            </header>
-            <div class="container content-layout">
-                <section class="content-layout--main">
-                    <div class="info-flight">
-                        <div class="info-fligh__title">
-                            <h3>Flights</h3>
+                </div>
+                <input type="submit" class="btn" value="search flight" />
+            </form>
+        </header>
+        <div class="container content-layout">
+            <section class="content-layout--main">
+                <div class="info-flight">
+                    <div class="info-fligh__title">
+                        <h3>Flights</h3>
+                        <p class="symbol-l">|</p>
+                        <p>Total <span>126 result</span></p>
+                    </div>
+                    <div>
+                        <button class="btn btn--white active"> Cheapest </button>
+                        <button class="btn btn--white">Best</button>
+                        <button class="btn btn--white">Quickest</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
                             <p class="symbol-l">|</p>
-                            <p>Total <span>126 result</span></p>
+                            <p>Rating: <span>4.5</span></p>
                         </div>
-                        <div>
-                            <button class="btn btn--white active">
-                                Cheapest
-                            </button>
-                            <button class="btn btn--white">Best</button>
-                            <button class="btn btn--white">Quickest</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-6.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
                             </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-6.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
                                 </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
-                                </div>
-
-                                <div class="price__sub">Opodo</div>
-                            </div>
-                            <button class="btn">Book now</button>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
-                            </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-7.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
-                                </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
                         </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
+                            <p class="symbol-l">|</p>
+                            <p>Rating: <span>4.5</span></p>
+                        </div>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-7.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
+                            </div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-
-                                <div class="price__sub">Opodo</div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
+                                </div>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
+                                </div>
                             </div>
-                            <button class="btn">Book now</button>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
-                            </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-8.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
-                                </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
                         </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
+                            <p class="symbol-l">|</p>
+                            <p>Rating: <span>4.5</span></p>
+                        </div>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-8.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
+                            </div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-
-                                <div class="price__sub">Opodo</div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
+                                </div>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
+                                </div>
                             </div>
-                            <button class="btn">Book now</button>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
-                            </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-6.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
-                                </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
                         </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
+                            <p class="symbol-l">|</p>
+                            <p>Rating: <span>4.5</span></p>
+                        </div>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-6.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
+                            </div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-
-                                <div class="price__sub">Opodo</div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
+                                </div>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
+                                </div>
                             </div>
-                            <button class="btn">Book now</button>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
-                            </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-8.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
-                                </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
                         </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
+                            <p class="symbol-l">|</p>
+                            <p>Rating: <span>4.5</span></p>
+                        </div>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-8.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
+                            </div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-
-                                <div class="price__sub">Opodo</div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
+                                </div>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
+                                </div>
                             </div>
-                            <button class="btn">Book now</button>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__main">
-                            <div class="card__main--bar">
-                                <p>Cheapest</p>
-                                <p class="symbol-l">|</p>
-                                <p>Rating: <span>4.5</span></p>
-                            </div>
-                            <div class="flight">
-                                <div class="flight__icon">
-                                    <img
-                                        src="./assets/images/flight/flight-7.png"
-                                        alt="flight-1"
-                                    />
-                                    <div class="flight__name">Emirates</div>
-                                </div>
-                                <div class="flight__shedule">
-                                    <div class="flight__shedule__start">
-                                        <div class="flight__shedule--time">
-                                            12:10
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            GAU
-                                        </div>
-                                    </div>
-                                    <div class="flight__shedule__center">
-                                        <img
-                                            src="./assets/images/flight/stack.png"
-                                            alt=""
-                                        />
-                                        <div>HKG</div>
-                                    </div>
-                                    <div class="flight__shedule__end">
-                                        <div class="flight__shedule--time">
-                                            18:30
-                                        </div>
-                                        <div class="flight__shedule--place">
-                                            DAC
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight__distance">68h 10m</div>
-                                <div class="flight__detail">
-                                    <a href="./flight-results-detail.html">
-                                        <button class="btn">
-                                            View Details
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
                         </div>
-                        <div class="card__aside">
-                            <div class="promotion">
-                                <div class="promotion__info">20% off</div>
-                                <div class="promotion__sub">Save $129</div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
                             </div>
-                            <div class="price">
-                                <div class="price__info">
-                                    <p>399</p>
-                                    <span>USD</span>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__main">
+                        <div class="card__main--bar">
+                            <p>Cheapest</p>
+                            <p class="symbol-l">|</p>
+                            <p>Rating: <span>4.5</span></p>
+                        </div>
+                        <div class="flight">
+                            <div class="flight__icon">
+                                <img src="./assets/images/flight/flight-7.png" alt="flight-1" />
+                                <div class="flight__name">Emirates</div>
+                            </div>
+                            <div class="flight__shedule">
+                                <div class="flight__shedule__start">
+                                    <div class="flight__shedule--time"> 12:10 </div>
+                                    <div class="flight__shedule--place"> GAU </div>
                                 </div>
-
-                                <div class="price__sub">Opodo</div>
+                                <div class="flight__shedule__center">
+                                    <img src="./assets/images/flight/stack.png" alt="" />
+                                    <div>HKG</div>
+                                </div>
+                                <div class="flight__shedule__end">
+                                    <div class="flight__shedule--time"> 18:30 </div>
+                                    <div class="flight__shedule--place"> DAC </div>
+                                </div>
                             </div>
-                            <button class="btn">Book now</button>
+                            <div class="flight__distance">68h 10m</div>
+                            <div class="flight__detail">
+                                <a href="./flight-results-detail.html">
+                                    <button class="btn"> View Details </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </section>
-                <aside class="content-layout--aside">
-                    <div class="card">
-                        <card class="card__title"> Filters </card>
-                        <div class="card__content">
+                    <div class="card__aside">
+                        <div class="promotion">
+                            <div class="promotion__info">20% off</div>
+                            <div class="promotion__sub">Save $129</div>
+                        </div>
+                        <div class="price">
+                            <div class="price__info">
+                                <p>399</p>
+                                <span>USD</span>
+                            </div>
+                            <div class="price__sub">Opodo</div>
+                        </div>
+                        <a href="./flight-summarry-pay.html"><button class="btn">Book now</button></a>
+                    </div>
+                </div>
+            </section>
+            <aside class="content-layout--aside">
+                <div class="card">
+                    <card class="card__title"> Filters </card>
+                    <div class="card__content">
+                        <div class="card__title--small">
+                            <p>Price</p>
+                            <p>+795</p>
+                        </div>
+                        <div class="chart">
+                            <section class="range-slider">
+                                <span class="rangeValues"></span>
+                                <input value="0" min="0" max="1000" step="5" type="range" />
+                                <input value="1000" min="0" max="1000" step="5" type="range" />
+                            </section>
+                            <img src="./assets/images/chart.png" alt="" />
+                        </div>
+                        <div class="stop">
                             <div class="card__title--small">
-                                <p>Price</p>
-                                <p>+795</p>
+                                <p>Stop</p>
+                                <span class="circle">2</span>
                             </div>
-                            <div class="chart">
-                                <section class="range-slider">
-                                    <span class="rangeValues"></span>
-                                    <input
-                                        value="0"
-                                        min="0"
-                                        max="1000"
-                                        step="5"
-                                        type="range"
-                                    />
-                                    <input
-                                        value="1000"
-                                        min="0"
-                                        max="1000"
-                                        step="5"
-                                        type="range"
-                                    />
-                                </section>
-                                <img src="./assets/images/chart.png" alt="" />
+                            <select name="stop" id="">
+                                <option value="via Los angeles, USA">
+                                    <span>via</span> Los angeles, USA
+                                </option>
+                                <option value="via Los angeles, USA">
+                                    <span>via</span> Los angeles, USA
+                                </option>
+                            </select>
+                        </div>
+                        <div class="airline">
+                            <div class="card__title--small">
+                                <p>Airlines</p>
                             </div>
-                            <div class="stop">
-                                <div class="card__title--small">
-                                    <p>Stop</p>
-                                    <span class="circle">2</span>
-                                </div>
-                                <select name="stop" id="">
-                                    <option value="via Los angeles, USA">
-                                        <span>via</span> Los angeles, USA
-                                    </option>
-                                    <option value="via Los angeles, USA">
-                                        <span>via</span> Los angeles, USA
-                                    </option>
-                                </select>
+                            <select name="stop" id="">
+                                <option value="via Los angeles, USA"> Qatar Airways </option>
+                                <option value="via Los angeles, USA"> Qatar Airways </option>
+                            </select>
+                        </div>
+                        <div class="airport">
+                            <div class="card__title--small">
+                                <p>Airport</p>
                             </div>
-                            <div class="airline">
-                                <div class="card__title--small">
-                                    <p>Airlines</p>
-                                </div>
-                                <select name="stop" id="">
-                                    <option value="via Los angeles, USA">
-                                        Qatar Airways
-                                    </option>
-                                    <option value="via Los angeles, USA">
-                                        Qatar Airways
-                                    </option>
-                                </select>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="Dhaka" />
+                                <label for="Dhaka">Dhaka</label>
                             </div>
-                            <div class="airport">
-                                <div class="card__title--small">
-                                    <p>Airport</p>
-                                </div>
-
-                                <div class="checkbox">
-                                    <input type="checkbox" name="" id="Dhaka" />
-                                    <label for="Dhaka">Dhaka</label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <input type="checkbox" name="" id="Dubai" />
-                                    <label for="Dubai">Dubai</label>
-                                </div>
-                                <div class="checkbox">
-                                    <input
-                                        type="checkbox"
-                                        name=""
-                                        id="Muscut"
-                                    />
-                                    <label for="Muscut">Muscut</label>
-                                </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="Dubai" />
+                                <label for="Dubai">Dubai</label>
                             </div>
-                            <div class="btn more">
-                                More <i class="icon icon-down-2"></i>
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="Muscut" />
+                                <label for="Muscut">Muscut</label>
                             </div>
                         </div>
+                        <div class="btn more"> More <i class="icon icon-down-2"></i>
+                        </div>
                     </div>
-                </aside>
-            </div>
-        </section>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
 
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script
-            type="text/javascript"
-            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-        ></script>
-        <script src="./assets/js/script.js"></script>
-    </body>
 </html>

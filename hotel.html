@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Booking</title>
+    <title>Hotel - Travel Booking</title>
     <link rel="stylesheet" href="./assets/css/slick.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/hotel.css" />
 </head>
 
 <body>
@@ -77,8 +78,8 @@
                         <i class="icon icon-plane"></i>
                         <a href="#">Flights</a>
                     </li>
-                    <li>
-                        <i class="icon icon-bed"></i><a href="hotel.html">hotel</a>
+                    <li class="active">
+                        <i class="icon icon-bed"></i><a href="">hotel</a>
                     </li>
                     <li>
                         <i class="icon icon-home"></i><a href="">villa</a>
@@ -89,20 +90,6 @@
                 </ul>
             </nav>
             <div class="form-search card">
-                <div class="tab-bar">
-                    <div class="tab-bar__item">
-                        <div class="tab-bar__item--label"></div>
-                        <div class="tab-bar__item--tab active">Oneway</div>
-                    </div>
-                    <div class="tab-bar__item">
-                        <div class="tab-bar__item--label"></div>
-                        <div class="tab-bar__item--tab">Round Trip</div>
-                    </div>
-                    <div class="tab-bar__item">
-                        <div class="tab-bar__item--label"></div>
-                        <div class="tab-bar__item--tab">Multy city</div>
-                    </div>
-                </div>
                 <form action="flight-results.html" class="form">
                     <div class="row">
                         <div class="card form__item form__item--large">
@@ -116,56 +103,33 @@
                         <div class="card form__item form__item--large">
                             <div class="form__item--label">
                                 <i class="icon icon-local"></i>
-                                <span>T0</span>
+                                <span>Check In- out</span>
                             </div>
-                            <input type="text" name="to" value="Dilhi, India" class="form__item--title" />
-                            <div class="form__item--sub-title"> Shuvas chandra bosu airport </div>
+                            <input type="text" name="to" value="21 Aug’19" class="form__item--title" />
+                            <div class="form__item--sub-title"> Sunday</div>
                         </div>
                         <div class="card form__item">
                             <div class="form__item--label">
                                 <i class="icon icon-char"></i>
-                                <span>class</span>
+                                <span>to</span>
                             </div>
-                            <div class="form__item--title">
-                                <input type="number" name="person" value="3" id="person" />
-                                <label for="person">Persons</label>
-                            </div>
-                            <select class="form__item--sub-title" name="class">
-                                <option value="business">Business</option>
-                                <option value="eco">Eco</option>
-                            </select>
+                            <input type="text" name="person" value="3 adult - 1 children - 2 room" id="person"
+                                class="form__item--title" />
+                            <div class=" form__item--sub-title"> Person </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="card form__item">
-                            <div class="form__item--label">
-                                <i class="icon icon-calendar"></i>
-                                <select name="type">
-                                    <option value="departure-return"> Departure </option>
-                                    <option value="return-departure"> return </option>
-                                </select>
-                            </div>
-                            <div class="form__item--title">21 Aug’20</div>
-                            <div class="form__item--sub-title">Sunday</div>
-                        </div>
-                        <div class="card form__item">
-                            <div class="form__item--label">
-                                <i class="icon icon-calendar"></i>
-                                <select name="type">
-                                    <option value="return-departure"> return </option>
-                                    <option value="departure-return"> Departure </option>
-                                </select>
-                            </div>
-                            <div class="form__item--title">29 Aug’20</div>
-                            <div class="form__item--sub-title">Sunday</div>
-                        </div>
-                        <div class="card form__item">
+                        <div class="card form__item set-width-1">
                             <div class="form__item--label">
                                 <i class="icon icon-calendar"></i>
                                 <span>return</span>
                             </div>
                             <div class="form__item--title">More</div>
                             <div class="form__item--sub-title"> Business </div>
+                        </div>
+                        <div class="checkbox set-checkbox">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox">I’m travelling for work</label>
                         </div>
                         <input type="submit" class="btn" value="search flight" />
                     </div>
@@ -276,75 +240,91 @@
                     <p class="section__title--sub">View all</p>
                 </div>
                 <div class="section__content">
-                    <div class="flight">
-                        <div class="flight__icon">
-                            <img src="./assets/images/flight/flight-1.png" alt="flight-1" />
-                            <div class="flight__name"> Via - <b>Mumbai, Bangalore, Pune</b>
-                            </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-1.png" alt="">
                         </div>
-                        <div class="flight__price">$546</div>
-                        <div class="flight__date">15 Aug - 22 Aug</div>
-                        <div class="flight__book">
-                            <button class="btn btn--white"> Book Now <i class="icon icon-right"></i>
-                            </button>
+                        <div class="card__text">
+                            <div class="card__text--title"> Alexandria </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
                         </div>
                     </div>
-                    <div class="flight">
-                        <div class="flight__icon">
-                            <img src="./assets/images/flight/flight-2.png" alt="flight-2" />
-                            <div class="flight__name"> Via - <b>Chennai, Mumbai </b>
-                            </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-2.png" alt="">
                         </div>
-                        <div class="flight__price">$345</div>
-                        <div class="flight__date">15 Aug - 22 Aug</div>
-                        <div class="flight__book">
-                            <button class="btn btn--white"> Book Now <i class="icon icon-right"></i>
-                            </button>
+                        <div class="card__text">
+                            <div class="card__text--title"> Astana </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
                         </div>
                     </div>
-                    <div class="flight">
-                        <div class="flight__icon">
-                            <img src="./assets/images/flight/flight-3.png" alt="flight-3" />
-                            <div class="flight__name"> Via - <b> Mumbai, Bangalore, Pune</b>
-                            </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-3.png" alt="">
                         </div>
-                        <div class="flight__price">$435</div>
-                        <div class="flight__date">15 Aug - 22 Aug</div>
-                        <div class="flight__book">
-                            <button class="btn btn--white"> Book Now <i class="icon icon-right"></i>
-                            </button>
+                        <div class="card__text">
+                            <div class="card__text--title"> Calgary </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
                         </div>
                     </div>
-                    <div class="flight">
-                        <div class="flight__icon">
-                            <img src="./assets/images/flight/flight-4.png" alt="flight-4" />
-                            <div class="flight__name"> Via - <b>Pune, Mumbai, Kolkata</b>
-                            </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-4.png" alt="">
                         </div>
-                        <div class="flight__price">$541</div>
-                        <div class="flight__date">15 Aug - 22 Aug</div>
-                        <div class="flight__book">
-                            <button class="btn btn--white"> Book Now <i class="icon icon-right"></i>
-                            </button>
+                        <div class="card__text">
+                            <div class="card__text--title"> Fairbanks </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
                         </div>
                     </div>
-                    <div class="flight">
-                        <div class="flight__icon">
-                            <img src="./assets/images/flight/flight-5.png" alt="flight-5" />
-                            <div class="flight__name"> Via - <b>Mumbai, Bangalore</b>
-                            </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-5.png" alt="">
                         </div>
-                        <div class="flight__price">$390</div>
-                        <div class="flight__date">15 Aug - 22 Aug</div>
-                        <div class="flight__book">
-                            <button class="btn btn--white"> Book Now<i class="icon icon-right"></i>
-                            </button>
+                        <div class="card__text">
+                            <div class="card__text--title"> Jackson </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
+                        </div>
+                    </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-6.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <div class="card__text--title"> Madison </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
+                        </div>
+                    </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-7.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <div class="card__text--title"> Monterrey </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
+                        </div>
+                    </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-8.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <div class="card__text--title"> Palo Alto </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
+                        </div>
+                    </div>
+                    <div class="card card--btn">
+                        <div class="card__img">
+                            <img src="./assets/images/hotel/hotel-9.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <div class="card__text--title"> Seville </div>
+                            <p class="card__text--sub">Best Hotel, villa</p>
                         </div>
                     </div>
                 </div>
             </section>
             <div class="banner section">
-                <img src="./assets/images/banner-1.png" alt="" />
+                <img src="./assets/images/banner-2.png" alt="" />
                 <div class="banner__title">Book Your Perfect Deals</div>
                 <div class="banner__price">$547</div>
                 <p class="banner--sub-price">Starting at</p>
