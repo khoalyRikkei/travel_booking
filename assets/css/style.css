@@ -12,13 +12,13 @@ body {
   position: relative;
   width: 100%;
   display: flex;
-  gap: 60px;
   height: 2000px;
   background: #e5e5e5;
+  min-width: 1400px;
 }
 
 .container {
-  padding-right: 60px;
+  padding: 0 60px;
 }
 
 button {
@@ -233,6 +233,30 @@ img {
   height: 7.58px;
 }
 
+.icon-char-2 {
+  background-image: url("../images/icon/icon-char-2.png");
+  width: 10px;
+  height: 12px;
+}
+
+.icon-wifi {
+  background-image: url("../images/icon/icon-wifi.png");
+  width: 14.42px;
+  height: 10.18px;
+}
+
+.icon-checked {
+  background-image: url("../images/icon/icon-checked.png");
+  width: 20px;
+  height: 20px;
+}
+
+.icon-baby-food {
+  background-image: url("../images/icon/icon-baby-food.png");
+  width: 12.73px;
+  height: 12.73px;
+}
+
 /* ---- End Icon ---- */
 .bg-top {
   background-image: url("../images/background.svg");
@@ -286,6 +310,9 @@ img {
   align-items: center;
   gap: 10px;
   padding: 5px 14px 5px 6px;
+}
+.profile-bar button {
+  background: rgba(108, 134, 177, 0.2);
 }
 
 .navbar {
@@ -479,6 +506,9 @@ img {
 #special-offer {
   overflow: hidden;
 }
+#special-offer .section__title {
+  margin-left: 60px;
+}
 #special-offer .section__content {
   margin-left: -15px;
   overflow: hidden;
@@ -563,6 +593,7 @@ img {
   justify-content: space-between;
   border-bottom: 1px solid #c1c4d0;
   padding: 25px 0;
+  white-space: nowrap;
 }
 .flight > * {
   flex: 1;
@@ -651,6 +682,12 @@ img {
   text-transform: uppercase;
   width: 138px;
   font-weight: 700;
+}
+
+.border {
+  height: 1px;
+  flex: 1;
+  background-color: #e6e6e9;
 }
 
 /*# sourceMappingURL=style.css.map */

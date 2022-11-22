@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Travel Booking</title>
+        <link rel="stylesheet" href="./assets/css/slick.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/components.css" />
+    </head>
+
+    <body>
+        <div class="bg-top"></div>
+        <aside class="sidebar">
+            <div class="sidebar--bar">
+                <div class="logo sidebar--toggle">
+                    <img src="./assets/images/logo-2.png" alt="" />
+                </div>
+                <div
+                    class="icon icon-bar"
+                    onclick="handleToggleMenu(this)"
+                    id="sidebar--toggle-close"
+                ></div>
+                <div
+                    class="icon icon-bar-reverse"
+                    onclick="handleToggleMenu(this)"
+                    id="sidebar--toggle-open"
+                ></div>
+            </div>
+            <div class="sidebar--menu">
+                <div class="btn">
+                    <i class="icon icon-home-2"></i>
+                    <span class="sidebar--toggle">Home</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-wallet"></i>
+                    <span class="sidebar--toggle">Wallet</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-contacts"></i>
+                    <span class="sidebar--toggle">Booking</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-bag"></i>
+                    <span class="sidebar--toggle">Business</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-earth"></i>
+                    <span class="sidebar--toggle">Explore</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-help"></i>
+                    <span class="sidebar--toggle">Support</span>
+                </div>
+            </div>
+            <div class="sidebar--footer">
+                <div class="btn btn--2">
+                    <div class="logo"><i class="icon icon-award"></i></div>
+                    <div class="sidebar--toggle">
+                        <h5>Get Premium</h5>
+                        <p>$39/m</p>
+                    </div>
+                    <i class="icon icon-pause"></i>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-layout">
+            <header>
+                <div class="top-menu container">
+                    <div class="profile-bar">
+                        <button class="btn">
+                            <i class="icon icon-home-add"></i>
+                            <span>Become a Partner</span>
+                            <i class="icon icon-down"></i>
+                        </button>
+                        <button class="btn">
+                            <i class="icon"
+                                ><img
+                                    src="./assets/images/avt-1.png"
+                                    alt="avt-1"
+                            /></i>
+                            <span>Become a Partner</span>
+                            <i class="icon icon-down"></i>
+                        </button>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="navbar__menu">
+                            <li class="active">
+                                <i class="icon icon-plane"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-bed"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-home"></i>
+                            </li>
+                            <li>
+                                <i class="icon icon-car"></i>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <form class="form" action="flight-results.html">
+                    <div class="form__item">
+                        <div class="form__label">Type</div>
+                        <div class="form__content">
+                            <select name="type" id="">
+                                <option value="onway">Onway</option>
+                                <option value="Round Trip">Round Trip</option>
+                                <option value="Multy city">Multy city</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">From</div>
+                        <div class="form__content">
+                            <input
+                                type="text"
+                                name="from"
+                                value="Dhaka,Bangladesh"
+                            />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">From</div>
+                        <div class="form__content">
+                            <input type="text" name="to" value="Dilhi, India" />
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">class</div>
+                        <div class="form__content">
+                            <select name="person" id="">
+                                <option value="1">1 Persons</option>
+                                <option value="2">2 Persons</option>
+                                <option value="3" selected>3 Persons</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__label">Departure - Return</div>
+                        <div class="form__content">
+                            <div>21 Aug’19 - 29 Aug’19</div>
+                            <i class="icon icon-calendar"></i>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn" value="search flight" />
+                </form>
+            </header>
+            <div class="container content-layout">
+                <section class="content-layout--main">
+                    <div class="info-flight">
+                        <div class="info-fligh__title">
+                            <h3>Payment Options</h3>
+                        </div>
+                        <p>
+                            The session will expire in: <span>26min5sec</span>
+                        </p>
+                    </div>
+                    <div class="step-status">
+                        <div>
+                            <i class="icon icon-checked"></i>
+                            <p>Flight selected</p>
+                            <div class="border"></div>
+                        </div>
+                        <div>
+                            <i class="icon icon-checked"></i>
+                            <p>Flight details</p>
+                            <div class="border"></div>
+                        </div>
+                        <div class="end">
+                            <span class="circle">3</span>
+                            <p>Flight booking</p>
+                        </div>
+                    </div>
+                    <div class="card" id="payment">
+                        <div class="card__title">Payment Method</div>
+                        <div class="flight-detail">
+                            <ul class="flight-detail--title">
+                                <li class="active">Details</li>
+                                <li>fares</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <form class="info-user">
+                                <div class="info-user--full">
+                                    <label for="">Card Number</label>
+                                    <input
+                                        type="text"
+                                        value="8893-2834-2424-5353"
+                                    />
+                                </div>
+                                <div class="info-user--full">
+                                    <label for="">Name of Card</label>
+                                    <input
+                                        type="text"
+                                        value="Rowhan Smith Card"
+                                    />
+                                </div>
+                                <div>
+                                    <label for="">Expiry Date</label>
+                                    <select name="" id="">
+                                        <option value="July (Month)">
+                                            July (Month)
+                                        </option>
+                                        <option value="July (Month)">
+                                            July (Month)
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="">Expiry Year</label>
+                                    <select name="" id="">
+                                        <option value="2020 (Year)">
+                                            2020 (Year)
+                                        </option>
+                                        <option value="2020 (Year)">
+                                            2020 (Year)
+                                        </option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="">CVV Code</label>
+                                    <select name="" id="">
+                                        <option value="343483 (CVV)">
+                                            343483 (CVV)
+                                        </option>
+                                        <option value="343483 (CVV)">
+                                            343483 (CVV)
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="info-user--full checkbox">
+                                    <input type="checkbox" checked />
+                                    <label for="">
+                                        I accept the Fare Rules, the
+                                        <span>Privacy Policy</span></label
+                                    >
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card__footer">
+                            <div class="price">
+                                <div class="price__info">
+                                    <p>5,000</p>
+                                    <span>USD</span>
+                                </div>
+                            </div>
+                            <button class="btn">Pay Now</button>
+                        </div>
+                    </div>
+                </section>
+                <aside class="content-layout--aside">
+                    <div class="card">
+                        <card class="card__title"> Profile </card>
+                        <div class="card__content">
+                            <div class="card_img">
+                                <img src="./assets/images/avt-2.png" alt="" />
+                            </div>
+                            <div class="card__content--name">
+                                Mansurul Haque
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
