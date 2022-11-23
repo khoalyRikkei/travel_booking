@@ -1,83 +1,85 @@
 .set-width-1 {
-	max-width: 140px;
+    max-width: 140px;
 }
 .set-checkbox {
-	flex: 1;
-	font-weight: 600;
-	font-size: 14px;
-	line-height: 19px;
-	display: flex;
-	align-items: center;
-	gap: 14px;
-	height: 50px;
-	align-self: end;
-	input {
-		border: 2.5px solid #d0d8e9;
-		border-radius: 4px;
-		width: 24px;
-		height: 24px;
-		outline: none;
-	}
+    flex: 1;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 50px;
+    align-self: end;
+    input {
+        border: 2.5px solid #d0d8e9;
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+        outline: none;
+    }
 }
 
 .card {
-	display: flex;
-	gap: 20px;
-	align-items: center;
-	&__img {
-	}
-	&--btn {
-		img {
-			width: 50px;
-			height: 50px;
-		}
-	}
-	&__text {
-		&--title {
-			font-weight: 700;
-			font-size: 18px;
-			line-height: 26px;
-			color: #282e44;
-			margin-bottom: 3px;
-		}
-		&--sub {
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 14px;
-			color: #475073;
-			opacity: 0.7;
-		}
-	}
-	&--btn {
-		background: rgba(124, 130, 155, 0.05);
-		border: 1px solid #ecedf5;
-		border-radius: 180px;
-		padding: 12px 22px;
-		width: 285px;
-	}
-	&__content {
-	}
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &--btn {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__text {
+        &--title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            color: #282e44;
+            margin-bottom: 3px;
+        }
+        &--sub {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            color: #475073;
+            opacity: 0.7;
+        }
+    }
+    &--btn {
+        background: rgba(124, 130, 155, 0.05);
+        border: 1px solid #ecedf5;
+        border-radius: 180px;
+        padding: 12px 22px;
+        min-width: 285px;
+        flex: 1;
+    }
 }
 .section {
-	&__content {
-		gap: 20px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
+    &__content {
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 .banner {
-	&__title {
-	}
-	&__price,
-	&--sub-price {
-		color: #ffc54d;
-	}
-	&--sub-price {
-	}
-	&__book {
-		.btn {
-			background: #ff9189;
-		}
-	}
+    &__price,
+    &--sub-price {
+        color: #ffc54d;
+    }
+
+    &__book {
+        .btn {
+            background: #ff9189;
+        }
+    }
+}
+.card-style-2 {
+    .card {
+        &__img {
+            width: 30%;
+        }
+    }
 }

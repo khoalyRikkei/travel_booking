@@ -1,144 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hotel - Travel Booking</title>
+        <link rel="stylesheet" href="./assets/css/slick.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/hotel.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hotel - Travel Booking</title>
-    <link rel="stylesheet" href="./assets/css/slick.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/hotel.css" />
-</head>
-
-<body>
-    <div class="bg-top"></div>
-    <aside class="sidebar">
-        <div class="sidebar--bar">
-            <div class="logo sidebar--toggle">
-                <img src="./assets/images/logo-2.png" alt="" />
-            </div>
-            <div class="icon icon-bar" onclick="handleToggleMenu(this)" id="sidebar--toggle-close"></div>
-            <div class="icon icon-bar-reverse" onclick="handleToggleMenu(this)" id="sidebar--toggle-open"></div>
-        </div>
-        <div class="sidebar--menu">
-            <div class="btn">
-                <i class="icon icon-home-2"></i>
-                <span class="sidebar--toggle">Home</span>
-            </div>
-            <div class="btn">
-                <i class="icon icon-wallet"></i>
-                <span class="sidebar--toggle">Wallet</span>
-            </div>
-            <div class="btn">
-                <i class="icon icon-contacts"></i>
-                <span class="sidebar--toggle">Booking</span>
-            </div>
-            <div class="btn">
-                <i class="icon icon-bag"></i>
-                <span class="sidebar--toggle">Business</span>
-            </div>
-            <div class="btn">
-                <i class="icon icon-earth"></i>
-                <span class="sidebar--toggle">Explore</span>
-            </div>
-            <div class="btn">
-                <i class="icon icon-help"></i>
-                <span class="sidebar--toggle">Support</span>
-            </div>
-        </div>
-        <div class="sidebar--footer">
-            <div class="btn btn--2">
-                <div class="logo"><i class="icon icon-award"></i></div>
-                <div class="sidebar--toggle">
-                    <h5>Get Premium</h5>
-                    <p>$39/m</p>
+    <body>
+        <div class="bg-top"></div>
+        <aside class="sidebar">
+            <div class="sidebar--bar">
+                <div class="logo sidebar--toggle">
+                    <img src="./assets/images/logo-2.png" alt="" />
                 </div>
-                <i class="icon icon-pause"></i>
+                <div
+                    class="icon icon-bar"
+                    onclick="handleToggleMenu(this)"
+                    id="sidebar--toggle-close"
+                ></div>
+                <div
+                    class="icon icon-bar-reverse"
+                    onclick="handleToggleMenu(this)"
+                    id="sidebar--toggle-open"
+                ></div>
             </div>
-        </div>
-    </aside>
-    <section class="main-layout">
-        <header class="container">
-            <div class="profile-bar">
-                <button class="btn">
-                    <i class="icon icon-home-add"></i>
-                    <span>Become a Partner</span>
-                    <i class="icon icon-down"></i>
-                </button>
-                <button class="btn">
-                    <i class="icon"><img src="./assets/images/avt-1.png" alt="avt-1" /></i>
-                    <span>Become a Partner</span>
-                    <i class="icon icon-down"></i>
-                </button>
+            <div class="sidebar--menu">
+                <div class="btn">
+                    <i class="icon icon-home-2"></i>
+                    <span class="sidebar--toggle">Home</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-wallet"></i>
+                    <span class="sidebar--toggle">Wallet</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-contacts"></i>
+                    <span class="sidebar--toggle">Booking</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-bag"></i>
+                    <span class="sidebar--toggle">Business</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-earth"></i>
+                    <span class="sidebar--toggle">Explore</span>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-help"></i>
+                    <span class="sidebar--toggle">Support</span>
+                </div>
             </div>
-            <nav class="navbar">
-                <ul class="navbar__menu">
-                    <li>
-                        <i class="icon icon-plane"></i>
-                        <a href="#">Flights</a>
-                    </li>
-                    <li class="active">
-                        <i class="icon icon-bed"></i><a href="">hotel</a>
-                    </li>
-                    <li>
-                        <i class="icon icon-home"></i><a href="">villa</a>
-                    </li>
-                    <li>
-                        <i class="icon icon-car"></i><a href="">taxi</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="form-search card">
-                <form action="flight-results.html" class="form">
-                    <div class="row">
-                        <div class="card form__item form__item--large">
-                            <div class="form__item--label">
-                                <i class="icon icon-local"></i>
-                                <span>From</span>
-                            </div>
-                            <input type="text" name="from" value=" Dhaka, Bangladesh" class="form__item--title" />
-                            <div class="form__item--sub-title"> Usmani airport, Sylhet </div>
-                        </div>
-                        <div class="card form__item form__item--large">
-                            <div class="form__item--label">
-                                <i class="icon icon-local"></i>
-                                <span>Check In- out</span>
-                            </div>
-                            <input type="text" name="to" value="21 Aug’19" class="form__item--title" />
-                            <div class="form__item--sub-title"> Sunday</div>
-                        </div>
-                        <div class="card form__item">
-                            <div class="form__item--label">
-                                <i class="icon icon-char"></i>
-                                <span>to</span>
-                            </div>
-                            <input type="text" name="person" value="3 adult - 1 children - 2 room" id="person"
-                                class="form__item--title" />
-                            <div class=" form__item--sub-title"> Person </div>
-                        </div>
+            <div class="sidebar--footer">
+                <div class="btn btn--2">
+                    <div class="logo"><i class="icon icon-award"></i></div>
+                    <div class="sidebar--toggle">
+                        <h5>Get Premium</h5>
+                        <p>$39/m</p>
                     </div>
-                    <div class="row">
-                        <div class="card form__item set-width-1">
-                            <div class="form__item--label">
-                                <i class="icon icon-calendar"></i>
-                                <span>return</span>
-                            </div>
-                            <div class="form__item--title">More</div>
-                            <div class="form__item--sub-title"> Business </div>
-                        </div>
-                        <div class="checkbox set-checkbox">
-                            <input type="checkbox" name="" id="checkbox">
-                            <label for="checkbox">I’m travelling for work</label>
-                        </div>
-                        <input type="submit" class="btn" value="search flight" />
-                    </div>
-                </form>
+                    <i class="icon icon-pause"></i>
+                </div>
             </div>
-        </header>
-        <section class="section" id="special-offer">
-            <div class="section__title">Special Offer</div>
-            <!-- <div class="section__content slick-custom">
+        </aside>
+        <section class="main-layout">
+            <header class="container">
+                <div class="profile-bar">
+                    <button class="btn">
+                        <i class="icon icon-home-add"></i>
+                        <span>Become a Partner</span>
+                        <i class="icon icon-down"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="icon"
+                            ><img src="./assets/images/avt-1.png" alt="avt-1"
+                        /></i>
+                        <span>Become a Partner</span>
+                        <i class="icon icon-down"></i>
+                    </button>
+                </div>
+                <nav class="navbar">
+                    <ul class="navbar__menu">
+                        <li>
+                            <i class="icon icon-plane"></i>
+                            <a href="#">Flights</a>
+                        </li>
+                        <li class="active">
+                            <i class="icon icon-bed"></i><a href="">hotel</a>
+                        </li>
+                        <li>
+                            <i class="icon icon-home"></i><a href="">villa</a>
+                        </li>
+                        <li>
+                            <i class="icon icon-car"></i><a href="">taxi</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="form-search card">
+                    <form action="hotel-results.html" class="form">
+                        <div class="row">
+                            <div class="card form__item form__item--large">
+                                <div class="form__item--label">
+                                    <i class="icon icon-local"></i>
+                                    <span>From</span>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="from"
+                                    value=" Dhaka, Bangladesh"
+                                    class="form__item--title"
+                                />
+                                <div class="form__item--sub-title">
+                                    Usmani airport, Sylhet
+                                </div>
+                            </div>
+                            <div class="card form__item form__item--large">
+                                <div class="form__item--label">
+                                    <i class="icon icon-local"></i>
+                                    <span>Check In- out</span>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="to"
+                                    value="21 Aug’19"
+                                    class="form__item--title"
+                                />
+                                <div class="form__item--sub-title">Sunday</div>
+                            </div>
+                            <div class="card form__item">
+                                <div class="form__item--label">
+                                    <i class="icon icon-char"></i>
+                                    <span>to</span>
+                                </div>
+                                <input
+                                    type="text"
+                                    name="person"
+                                    value="3 adult - 1 children - 2 room"
+                                    id="person"
+                                    class="form__item--title"
+                                />
+                                <div class="form__item--sub-title">Person</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card form__item set-width-1">
+                                <div class="form__item--label">
+                                    <i class="icon icon-calendar"></i>
+                                    <span>return</span>
+                                </div>
+                                <div class="form__item--title">More</div>
+                                <div class="form__item--sub-title">
+                                    Business
+                                </div>
+                            </div>
+                            <div class="checkbox set-checkbox">
+                                <input type="checkbox" name="" id="checkbox" />
+                                <label for="checkbox"
+                                    >I’m travelling for work</label
+                                >
+                            </div>
+                            <input
+                                type="submit"
+                                class="btn"
+                                value="search hotel"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </header>
+            <section class="section" id="special-offer">
+                <div class="section__title">Special Offer</div>
+                <!-- <div class="section__content slick-custom">
                     <div class="slick-slider slick">
                         <div class="card slider__item">
                             <div class="card--img">
@@ -232,113 +266,145 @@
                         </div>
                     </div>
                 </div> -->
-        </section>
-        <div class="container">
-            <section class="section card" id="best-offer">
-                <div class="section__title">
-                    <p>Best Offer</p>
-                    <p class="section__title--sub">View all</p>
-                </div>
-                <div class="section__content">
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-1.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Alexandria </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-2.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Astana </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-3.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Calgary </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-4.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Fairbanks </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-5.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Jackson </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-6.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Madison </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-7.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Monterrey </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-8.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Palo Alto </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                    <div class="card card--btn">
-                        <div class="card__img">
-                            <img src="./assets/images/hotel/hotel-9.png" alt="">
-                        </div>
-                        <div class="card__text">
-                            <div class="card__text--title"> Seville </div>
-                            <p class="card__text--sub">Best Hotel, villa</p>
-                        </div>
-                    </div>
-                </div>
             </section>
-            <div class="banner section">
-                <img src="./assets/images/banner-2.png" alt="" />
-                <div class="banner__title">Book Your Perfect Deals</div>
-                <div class="banner__price">$547</div>
-                <p class="banner--sub-price">Starting at</p>
-                <div class="banner__book">
-                    <button class="btn">book now</button>
+            <div class="container">
+                <section class="section card" id="best-offer">
+                    <div class="section__title">
+                        <p>Best Offer</p>
+                        <p class="section__title--sub">View all</p>
+                    </div>
+                    <div class="section__content">
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-1.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Alexandria</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-2.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Astana</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-3.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Calgary</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-4.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Fairbanks</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-5.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Jackson</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-6.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Madison</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-7.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Monterrey</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-8.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Palo Alto</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                        <div class="card card--btn">
+                            <div class="card__img">
+                                <img
+                                    src="./assets/images/hotel/hotel-9.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="card__text">
+                                <div class="card__text--title">Seville</div>
+                                <p class="card__text--sub">Best Hotel, villa</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="banner section">
+                    <img src="./assets/images/banner-2.png" alt="" />
+                    <div class="banner__title">Book Your Perfect Deals</div>
+                    <div class="banner__price">$547</div>
+                    <p class="banner--sub-price">Starting at</p>
+                    <div class="banner__book">
+                        <button class="btn">book now</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-</body>
-
+        </section>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+            integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>

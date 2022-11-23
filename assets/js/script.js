@@ -85,3 +85,104 @@ $("#rangeMax").on("input", function (e) {
         right: 100 - calcLeftPosition(newValue) + "%",
     });
 });
+const carousel = document.querySelector(".carousel");
+if (carousel) {
+    carousel.style.position = "relative";
+    let carouselDots = carousel.querySelector(".carousel__control--dots");
+    let carouselItems = document.querySelectorAll(".carousel__item");
+    carouselDots.innerHTML = "";
+    carouselItems.forEach((element, index) => {
+        let span = document.createElement("span");
+        const src = element.querySelector("img").src;
+
+        span.style.cursor = "pointer";
+        if (screen.width < 992) {
+            span.style.width = "5px";
+            span.style.height = "5px";
+            span.style.backgroundColor = "grey";
+        } else {
+            span.style.width = "20px";
+            span.style.height = "20px";
+            span.style.border = "1px solid white";
+            const img = document.createElement("img");
+            img.src = src;
+            img.style.width = "100%";
+            img.style.height = "100%";
+            img.style.borderRadius = "50%";
+            img.style.objectFit = "cover";
+            span.appendChild(img);
+        }
+
+        span.style.borderRadius = "50%";
+        span.style.display = "inline-block";
+        span.setAttribute("onclick", "handleClickDot(this)");
+        if (index === 0) {
+            span.style.backgroundColor = "white";
+            element.style.display = "block";
+            span.style.border = "2px solid orange";
+        } else {
+            span.style.backgroundColor = "grey";
+            element.style.display = "none";
+            span.style.border = "1px solid white";
+        }
+        carouselDots.appendChild(span);
+    });
+}
+function handleClickDot(element) {
+    let carouselItems = document.querySelectorAll(".carousel__item");
+    let carouselDots = document.querySelector(
+        ".carousel__control--dots"
+    ).childNodes;
+    if (!Number.isInteger(element)) {
+        const index = Array.from(element.parentElement.children).indexOf(
+            element
+        );
+        carouselItems.forEach((item, i) => {
+            if (index === i) {
+                carouselDots[i].style.backgroundColor = "white";
+                carouselDots[i].style.border = "2px solid orange";
+                item.style.display = "block";
+            } else {
+                carouselDots[i].style.backgroundColor = "grey";
+                carouselDots[i].style.border = "1px solid white";
+                item.style.display = "none";
+            }
+        });
+    } else {
+        let index;
+        let i = element;
+        carouselDots.forEach((item, count) => {
+            if (item.style.backgroundColor === "white") {
+                index = count;
+            }
+        });
+
+        if (index === 0 && i < 0) {
+            carouselDots[carouselDots.length + i].style.backgroundColor =
+                "white";
+            carouselDots[carouselDots.length + i].style.border =
+                "2px solid orange";
+            carouselItems[carouselItems.length + i].style.display = "block";
+            carouselDots[index].style.backgroundColor = "grey";
+            carouselDots[index].style.border = "1px solid white";
+            carouselItems[index].style.display = "none";
+        } else if (index === carouselDots.length - 1 && i > 0) {
+            carouselDots[0].style.backgroundColor = "white";
+            carouselDots[0].style.border = "2px solid orange";
+            carouselItems[0].style.display = "block";
+            carouselDots[index].style.backgroundColor = "grey";
+            carouselDots[index].style.border = "1px solid white";
+            carouselItems[index].style.display = "none";
+        } else {
+            carouselDots[index + i].style.backgroundColor = "white";
+            carouselDots[index + i].style.border = "2px solid orange";
+            carouselItems[index + i].style.display = "block";
+            carouselDots[index].style.backgroundColor = "grey";
+            carouselDots[index].style.border = "1px solid white";
+            carouselItems[index].style.display = "none";
+        }
+    }
+}
+function prevNextSlide(count) {
+    handleClickDot(count);
+}
